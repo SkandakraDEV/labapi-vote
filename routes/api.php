@@ -18,5 +18,6 @@ Route::prefix('/v1')->group(function(){
         Route::get('/votes', [VoteController::class, 'getActiveVoteSession']);
         Route::get('/vote/{id}', [VoteController::class, 'chooseVotingCandidate']);
         Route::get('/choose/{id}/vote/{user_id}/user', [VoteController::class, 'chooseCandidate']);
+        Route::post('/choose', [VoteController::class, 'chooseCandidatePost']);
     });
 });
